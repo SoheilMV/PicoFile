@@ -1,5 +1,5 @@
 # PicoFile
-* Convert PicoFile upload Center links to direct link
+* Convert PicoFile upload center links to direct link
 * It has 20 GB of free space
 
 ## using
@@ -7,7 +7,6 @@
 using PicoFile_Direct_Link;
 
 PicoFile pic = new PicoFile();
-
 try
 {
     pic.URL = http://s8.picofile.com/file/8355584542/direct_link.png; //Enter the file address
