@@ -19,7 +19,7 @@ try
    
     string link = await pic.DirectLink(); //Receives direct link
     //Or
-    string link = = await pic.DirectLink("File password"); //Receives direct link
+    string link = await pic.DirectLink("File password"); //Receives direct link
     
     Console.WriteLine(link); //Show direct link
 }
