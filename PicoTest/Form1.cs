@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using PicoFile_Direct_Link;
+using PicoFileSharp;
 
 namespace PicoTest
 {
     public partial class Form1 : Form
     {
-        PicoFile pic = new PicoFile();
-
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +23,7 @@ namespace PicoTest
         {
             try
             {
-                pic.URL = txtUrl.Text;
+                PicoFile pic = new PicoFile(txtUrl.Text);
                 if (chkPass.Checked)
                     txtView.Text = await pic.DirectLink(txtPass.Text);
                 else

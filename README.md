@@ -1,25 +1,20 @@
 # PicoFile
-<html>
-    <body>
-        <img src="http://s8.picofile.com/file/8355584542/direct_link.png" alt="" style="max-width:100%;">
-    </body>
-</html>
+
+![PicoFile](Images/PicoFile.png)
 
 * Convert PicoFile upload center links to direct link
 * It has 20 GB of free space
 
 ## using
 ````csharp
-using PicoFile_Direct_Link;
+using PicoFileSharp;
 
-PicoFile pic = new PicoFile();
 try
 {
-    pic.URL = "http://s8.picofile.com/file/8355584542/direct_link.png"; //Enter the file address
-   
-    string link = await pic.DirectLink(); //Receives direct link
+    PicoFile picoFile = new PicoFile("https://s29.picofile.com/file/8462040100/WinRAR_6_02.zip.html"); //Enter the file address
+    string link = await picoFile.DirectLink(); //Receives direct link
     //Or
-    string link = await pic.DirectLink("File password"); //Receives direct link
+    string link = await picoFile.DirectLink("File password"); //Receives direct link
     
     Console.WriteLine(link); //Show direct link
 }

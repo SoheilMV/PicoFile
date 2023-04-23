@@ -3,17 +3,13 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PicoFile_Direct_Link
+namespace PicoFileSharp
 {
     public class PicoFile
     {
         private string _url = string.Empty;
         private string _host = string.Empty;
         private string _num = string.Empty;
-
-        public PicoFile()
-        {
-        }
 
         public string URL
         {
@@ -28,6 +24,11 @@ namespace PicoFile_Direct_Link
                 _host = array[2];
                 _num = array[4];
             }
+        }
+
+        public PicoFile(string url)
+        {
+            URL = url;
         }
 
         public async Task<string> DirectLink()
